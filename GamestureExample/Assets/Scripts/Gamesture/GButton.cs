@@ -15,6 +15,10 @@ namespace Gamesture
             button.onClick.AddListener(() =>  OnButtonClick());
         }
 
-        private void OnButtonClick() => GetComponent<GButtonAction>()?.InvokeButtonAction();
+        private void OnButtonClick()
+        {
+            foreach (var item in GetComponents<GButtonAction>())
+                item?.InvokeButtonAction();
+        }
     }
 }
