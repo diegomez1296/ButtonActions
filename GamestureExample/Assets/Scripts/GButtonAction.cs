@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class GButtonAction : MonoBehaviour
+namespace Gamesture
 {
-    public abstract void InvokeButtonAction();
+    public abstract class GButtonAction : MonoBehaviour
+    {
+        public abstract void InvokeButtonAction();
+    }
 }

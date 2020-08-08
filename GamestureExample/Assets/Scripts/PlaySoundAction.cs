@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaySoundAction : GButtonAction
+namespace Gamesture
 {
-    public override void InvokeButtonAction()
+    public class PlaySoundAction : GButtonAction
     {
-        throw new System.NotImplementedException();
+        [SerializeField] private AudioSourceController audioSourceController;
+        [SerializeField] private SoundDBController soundDBController;
+
+        public override void InvokeButtonAction() => audioSourceController?.PlaySound(soundDBController?.GetRandomSound());
     }
 }

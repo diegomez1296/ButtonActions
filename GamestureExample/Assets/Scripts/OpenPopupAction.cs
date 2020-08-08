@@ -1,11 +1,13 @@
-﻿using Gamesture;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenPopupAction : GButtonAction
+namespace Gamesture
 {
-    [SerializeField] private PopupController popup;
+    public class OpenPopupAction : GButtonAction
+    {
+        [SerializeField] private PopupController popup;
 
-    public override void InvokeButtonAction() => popup?.OnEnable();
+        public override void InvokeButtonAction() => popup?.OnEnable();
+    }
 }
